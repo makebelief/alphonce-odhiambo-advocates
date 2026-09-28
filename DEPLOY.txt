@@ -1,0 +1,10 @@
+cd ~/Downloads
+unzip -o alphonce-odhiambo-advocates.zip -d ~/website-projects
+cd ~/website-projects/alphonce-odhiambo-advocates
+npm run check
+git init
+git add .
+git commit -m "Build Alphonce Odhiambo & Company Advocates website"
+git branch -M main
+gh repo create alphonce-odhiambo-advocates --public --source=. --remote=origin --push
+vercel --prod --yes
